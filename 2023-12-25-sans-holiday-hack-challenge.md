@@ -180,7 +180,7 @@ Depending on the browser, there are different ways to make developer tools aware
 
 Importing the source map into developer tools will generate new entries in the site map list under `webpack://` for a NodeJS application using the React framework.
 
-![Pasted image 20231224022946.png](./-static/attachments/Pasted%20image%2020231224022946.png)
+![Pasted image 20231224022946.png](./images/Pasted%20image%2020231224022946.png)
 
 ## Christmas Island
 
