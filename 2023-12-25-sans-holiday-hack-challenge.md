@@ -154,7 +154,7 @@ There's also a `socket.addEventListener("message", ... )` block on line `327` wh
 | `v:`          | Update entity by UID            |
 | `p:`          | Ports list update               |
 | `z:`          | Highlight port                  |
-| `i:`          | Set playerData                  | 
+| `i:`          | Set playerData                  |
 | `b:`          | Blockdata update                |
 | `k:`          | Is decoded, but has no porpoise |
 | `x:`          | Delete entity                   |
@@ -166,7 +166,7 @@ There's also a `socket.addEventListener("message", ... )` block on line `327` wh
 
 There's also some dead HTML code in `/sea` that exposes the `/fishdensityref.html` file. Visiting this in the browser just redirects back to the Holiday Hack Challenge, but the response exposes the existence of `/js/main/christmasmagic.js`, which looks like some JavaScript written for [NodeJS](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) that [Webpack](https://webpack.js.org/concepts/) had its way with.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231224023101.png)
+![Pasted image 20231224023101.png](Pasted%20image%2020231224023101.png)
 
 > Webpack can be explained in just over 2 minutes [here](https://www.youtube.com/watch?v=5zeXFC_-gMQ). NodeJS [here](https://www.youtube.com/watch?v=q-xS25lsN3I).
 
@@ -180,9 +180,7 @@ Depending on the browser, there are different ways to make developer tools aware
 
 Importing the source map into developer tools will generate new entries in the site map list under `webpack://` for a NodeJS application using the React framework.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231224022946.png)
-
-
+![Pasted image 20231224022946.png](./-static/attachments/Pasted%20image%2020231224022946.png)
 
 ## Christmas Island
 
@@ -611,7 +609,7 @@ The recovered password is `IluvC4ndyC4nes!`.
 
 #### Ostrich Saloon
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210004852.png)
+![Pasted image 20231210004852.png](Pasted%20image%2020231210004852.png)
 
 Rose Mold, a troll from Planet Frost, requires our help escalating privileges in Linux.
 
@@ -787,7 +785,7 @@ Your answer is correct!
 
 #### Luggage-Lock
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210104707.png)
+![Pasted image 20231210104707.png](Pasted%20image%2020231210104707.png)
 
 Garland Candlesticks can't remember the combination to open his luggage lock.
 
@@ -806,7 +804,7 @@ I found _Elf The Dwarf's, Gloriously, Unfinished, Adventure! - Vol 1_ on the lef
 
 Loading up the game from the inventory and inspecting the source, it's running a Javascript-based gameboy ROM emulator. The ROM is sourced  from the path `rom/game.gb`.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231211212824.png)
+![Pasted image 20231211212824.png](Pasted%20image%2020231211212824.png)
 
 Analyzing the source code in the browser's dev console, there are keybinds being mapped that aren't mentioned at the top.
 
@@ -929,13 +927,13 @@ In Burp, I set the proxy to automatically match and replace certain constants in
 
 Which should allow for faster rewinds and a larger buffer. Clearing the browser cache and reloading the game will apply these changes.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231211205944.png)
+![Pasted image 20231211205944.png](Pasted%20image%2020231211205944.png)
 
 And now, when a mistake is made, it's much easier to revert our changes and correct it.
 
 The block in the upper-left of the QR code presents a challenge: you can't see it's inteded location anywhere near it. After some thorough investigating, though, the intended location was on the complete opposite side of the QR code.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231211211757.png)
+![Pasted image 20231211211757.png](Pasted%20image%2020231211211757.png)
 ```
 http://8bitelf.com/
 ```
@@ -962,9 +960,9 @@ Shifty says he doesn't cheat...
 
 Playing the game, you would've found that Shifty always wins, or at minimum ties, which guarantees him at least 1 point every turn.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213194226.png)
+![Pasted image 20231213194226.png](Pasted%20image%2020231213194226.png)
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213194256.png)
+![Pasted image 20231213194256.png](Pasted%20image%2020231213194256.png)
 
 After analyzing the code, there was a validation function whose regex didn't quite look right.
 
@@ -977,7 +975,7 @@ function IsValid(text) {
 `^[n0-9][na]{0,2}$`
 
 An explanation of how this regular expression works:
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213194524.png)
+![Pasted image 20231213194524.png](Pasted%20image%2020231213194524.png)
 
 So basically, the following "numbers" will also pass the validation check.
 
@@ -1072,9 +1070,9 @@ ValueError at line 172 of /root/webserver/webserver.py: ValueError at line 97 of
 
 The trick is something called NaN (Not-A-Number) injection in Python.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213204104.png)
+![Pasted image 20231213204104.png](Pasted%20image%2020231213204104.png)
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213204114.png)
+![Pasted image 20231213204114.png](Pasted%20image%2020231213204114.png)
 
 Repeating that play 5 times wins you the game.
 
@@ -1105,11 +1103,11 @@ Chimney Scissorsticks says the captain is playing with a new SDR using some "fan
 1. Find the planned "go-date" and "go-time" and radio frequency they plan to use.
 2. Recreate an administrative JWT value to successfully transmit.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210152313.png)
+![Pasted image 20231210152313.png](Pasted%20image%2020231210152313.png)
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210152744.png)
+![Pasted image 20231210152744.png](Pasted%20image%2020231210152744.png)
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210155328.png)
+![Pasted image 20231210155328.png](Pasted%20image%2020231210155328.png)
 - The private key is stored in a folder.
 - A `keys` subfolder exists within the same folder the `roleMonitor` token resides, and the captain's public key `capsPubKey.key` is there aswell.
 - The captain believes they restricted the private/public key file permissions to the minimum necessary.
@@ -1131,7 +1129,7 @@ There are also 3 volumes of owner's manuals sitting atop of the bookshelf. Readi
 
 > Web Interception proxies like [Burp](https://portswigger.net/burp) and [Zap](https://www.zaproxy.org) make web sites fun!
 
-> I've seen the Captain with [his Journal](https://elfhunt.org/static/images/captainsJournal.png) visiting Pixel Island!
+> I've seen the Captain with [his Journal](https://elfhunt.org/static/images/captainsJournal.png]] visiting Pixel Island!
 
 > A great introduction to JSON Web Tokens is available from [Auth0](https://jwt.io/introduction).
 
@@ -1162,11 +1160,11 @@ Those cookies are JWTs, which can be decoded in parts.
 
 The `justWatchThisRole` is stored as a cookie and sent in the `Authorization` header for every access request.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210152726.png)
+![Pasted image 20231210152726.png](Pasted%20image%2020231210152726.png)
 
 This is the owner's card mentioned above. Using the information here, by capturing a GET request to `/checkRole` using Burp  to `/jwtDefault/rMonitor.tok`
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210195358.png)
+![Pasted image 20231210195358.png](Pasted%20image%2020231210195358.png)
 
 Taking note of the response, which is the JWT for the `rMonitor` role, then modifying the `Authorization` after intercepting the request to use the SDR gained us access. But since our role is just `rMonitor`, attempting to decode the signals was unsuccessful.
 
@@ -1188,7 +1186,7 @@ Another request made using the newly received `rMonitor` JWT to `/jwtDefault/rDe
 
 The `CW` signal decoded as morse code:
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210200634.png)
+![Pasted image 20231210200634.png](Pasted%20image%2020231210200634.png)
 
 ```
 CQ CQ CQ DE KH644 -- SILLY CAPTAIN! WE FOUND HIS FANCY RADIO PRIVATE KEY IN A FOLDER CALLED TH3CAPSPR1V4T3F0LD3R
@@ -1196,7 +1194,7 @@ CQ CQ CQ DE KH644 -- SILLY CAPTAIN! WE FOUND HIS FANCY RADIO PRIVATE KEY IN A FO
 
 The next signal (`NUM`) was audio-text (like the Lincolnshire Poacher).
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210200821.png)
+![Pasted image 20231210200821.png](Pasted%20image%2020231210200821.png)
 
 These could possibly be UNIXs epochs in seconds.
 
@@ -1208,7 +1206,7 @@ These could possibly be UNIXs epochs in seconds.
 
 And finally the last signal to decode is `FX`, or RadioFax, and an image.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210202534.png)
+![Pasted image 20231210202534.png](Pasted%20image%2020231210202534.png)
 
 ```
 10426Hz (10.426kHz)
@@ -1251,7 +1249,7 @@ There is a plugin for Burp Suite called JWT Editor that allows you to easily ins
 
 A legitimate JWT for the `radioDecoder` is successfully verified using the captain's private key. That means this private key is being used to sign for all JWTs, and that means I can sign for JWTs I create.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210222239.png)
+![Pasted image 20231210222239.png](Pasted%20image%2020231210222239.png)
 
 Changing the `role` key of the JWT payload to the suspected role name for the administrator (`GeeseIslandsSuperChiefCommunicationsOfficer`) and signing using that private key is all that's needed.
 
@@ -1263,7 +1261,7 @@ Since the last integer in each string is useless, the go-date seems to be 1224 (
 **Go-Date**: `1224`
 **Go-Time**: `1200`
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231211165817.png)
+![Pasted image 20231211165817.png](Pasted%20image%2020231211165817.png)
 
 
 
@@ -1276,7 +1274,7 @@ He says that Alabaster's SSH account, that we have access to from a previous cha
 
 Connecting with the same SSH private key and SSH certificate with the `admin` principal from **Certificate SSHenanigans**, an `impacket` directory is found under the home directory. I also requested a new access token for `https://mangement.azure.com/` using the Azure Metadata Service API.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231223015841.png)
+![Pasted image 20231223015841.png](Pasted%20image%2020231223015841.png)
 
 ```json
 {
@@ -1845,7 +1843,7 @@ Certipy v4.8.2 - by Oliver Lyak (ly4k)
 [*] Got hash for 'wombleycube@northpole.local': aad3b435b51404eeaad3b435b51404ee:5740373231597863662f6d50484d3e23
 ```
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231229045512.png)
+![Pasted image 20231229045512.png](Pasted%20image%2020231229045512.png)
 
 This TGT issued by the Kerberos authentication service (AS) can be sent back to the KDC ticket granting service (TGS) in a **Pass the Ticket** attack to then be issued the service ticket to authentication as a user.
 
@@ -1889,13 +1887,13 @@ Part 2
 
 Changing the JSON value to `speed: 100` and re-encoding it to match the cookie's format makes it much easier to shoot down the elves. At 75 points the game presents us with a victory and _The Captain's Journal_.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231210151546.png)
+![Pasted image 20231210151546.png](Pasted%20image%2020231210151546.png)
 
 We can now speak to Chimney Scissorsticks as the Brass Buoy Port on Steampunk island.
 
 #### Certificate SSHenanigans
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231209194916.png)
+![Pasted image 20231209194916.png](Pasted%20image%2020231209194916.png)
 
 > _Difficulty:_ 🎄🎄🎄🎄🎄
 > Go to Pixel Island and review Alabaster Snowball's new SSH certificate configuration and Azure [Function App](https://northpole-ssh-certs-fa.azurewebsites.net/api/create-cert?code=candy-cane-twirl). What type of cookie cache is Alabaster planning to implement?
@@ -1911,7 +1909,7 @@ He gives a set of instructions.
 
 The [Function App](https://northpole-ssh-certs-fa.azurewebsites.net/api/create-cert?code=candy-cane-twirl) allowing elves the ability to request SSH certificates looks like so:
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231209195502.png)
+![Pasted image 20231209195502.png](Pasted%20image%2020231209195502.png)
 
 We have to generate a keypair on our own system using `ssh-keygen`, then upload the public key to the Function App to obtain our certificate.
 
@@ -1935,7 +1933,7 @@ Using this certificate signed by the server's CA, and my private key, I'm able t
 
 `~# ssh -i ./sshenanigans.crt -i ./sshenanigans_rsa monitor@ssh-server-vm.santaworkshopgeeseislands.org`
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231211231801.png)
+![Pasted image 20231211231801.png](Pasted%20image%2020231211231801.png)
 
 Pressing `CTRL+C` exited this `/usr/local/bin/sattrackr` program and gave me a normal `bash` shell.
 
@@ -1966,7 +1964,7 @@ Pressing `CTRL+C` exited this `/usr/local/bin/sattrackr` program and gave me a n
 
 https://gist.github.com/hardcidr/27026512d803f0b13362216e977a26ba
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231221232313.png)
+![Pasted image 20231221232313.png](Pasted%20image%2020231221232313.png)
 
 ```bash
 AUTH="$(curl -H 'Metadata: true' 'http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://management.azure.com/' | jq -r .access_token)"
@@ -2043,19 +2041,19 @@ This means that when a user requests a certificate when providing their public k
 
 The request can be intercepted and modified in Burp.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213165637.png)
+![Pasted image 20231213165637.png](Pasted%20image%2020231213165637.png)
 
 The certificate successfully generated and provided it in the response body. This is actually the same vulnerability mentioned in the Reportinator challenge's pentest report.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213165714.png)
+![Pasted image 20231213165714.png](Pasted%20image%2020231213165714.png)
 
 And double-checking with `ssh-keygen` vertifies that the principal is in fact `admin`.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213165813.png)
+![Pasted image 20231213165813.png](Pasted%20image%2020231213165813.png)
 
 And SSH authentication works!
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231213165930.png)
+![Pasted image 20231213165930.png](Pasted%20image%2020231213165930.png)
 
 Alabaster's TODO list is named `alabaster_todo.md` under the home dir.
 
@@ -2132,17 +2130,17 @@ Running the buildscript builds and runs the container and exposes the services:
 
 After a VNC connection is established, the container can be seen running Fluxbox (minimal and lightweight X window manager).
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231231154415.png)
+![Pasted image 20231231154415.png](Pasted%20image%2020231231154415.png)
 
 There is also *NanoSat MO Base Station Tool* installed, which opens a tool called _CTT: Consumer Test Tool_.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231231154533.png)
+![Pasted image 20231231154533.png](Pasted%20image%2020231231154533.png)
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231231154546.png)
+![Pasted image 20231231154546.png](Pasted%20image%2020231231154546.png)
 
 On the other hand, the satellite control panel in the ground station opens a webpage at https://nanosat.one/ titled "Nanosat Christmas Comms".
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231231160955.png)
+![Pasted image 20231231160955.png](Pasted%20image%2020231231160955.png)
 
 There's also a button in the bottom-right corner of the page shaped like an alligator head. Clicking it opens a dialog with what looks like a terminal for _GateXOR_ (pronounded *gate-or*). There are buttons for About, Time Travel, and Collapse.
 
@@ -2237,7 +2235,7 @@ Nmap done: 256 IP addresses (1 host up) scanned in 2.89 seconds
 
 Attempting to input any information into the **Directory Service URI** field in the Consumer Test Tool throws an exception.
 
-![image](/resources/2024-04-05-2023-12-25-sans-holiday-hack-challenge/Pasted-image-20231231180208.png)
+![Pasted image 20231231180208.png](Pasted%20image%2020231231180208.png)
 
 The `org.ccsds.moims.mo.mal.MalException` classpath was referring to [CCSDS MO Services](https://en.wikipedia.org/wiki/CCSDS_MO_Services). That page also references _NanoSat_ and the [NanoSat MO Framework](https://en.wikipedia.org/wiki/NanoSat_MO_Framework), an open-source framework for small satellites based on CCSDS Mission Operations services.
 
